@@ -12,7 +12,7 @@ app.get('/api/generate-token', (req, res) => {
   const payload = {
     email: 'ab@cd.com',  // hardcoded for testing
     // exp: Math.floor(Date.now() / 1000) + (10 * 60)  // Expiration 10 minutes
-    exp: Math.floor(Date.now() / 1000) + 10
+    exp: Math.floor(Date.now() / 1000) + 10 // Expiration 10 seconds
   };
 
   const secretKey = process.env.JWT_SECRET_KEY
